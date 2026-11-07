@@ -1,0 +1,5 @@
+USE registrar_queue_db;
+INSERT IGNORE INTO services(name,code,description,estimated_minutes) VALUES ('Certificate of Registration','COR','Request a Certificate of Registration.',10),('Transcript of Records','TOR','Request an official transcript.',20),('Certificate of Grades','COG','Request certificate of grades.',10),('Good Moral Certificate','GMC','Request a good moral certificate.',15),('Diploma Request','DIP','Diploma-related requests.',20),('Enrollment Verification','ENR','Verify enrollment information.',10),('Student Records Request','REC','Other student records.',15),('Other Registrar Transactions','OTH','Other registrar concerns.',15);
+INSERT IGNORE INTO service_counters(name,location) VALUES('Counter 1','Registrar Office'),('Counter 2','Registrar Office'),('Counter 3','Registrar Office');
+INSERT IGNORE INTO operating_hours(day_of_week,opens_at,closes_at,is_open) VALUES(1,'08:00','17:00',1),(2,'08:00','17:00',1),(3,'08:00','17:00',1),(4,'08:00','17:00',1),(5,'08:00','17:00',1),(6,'08:00','12:00',1),(7,'00:00','00:00',0);
+INSERT IGNORE INTO system_settings VALUES('school_name','REGISQUEUE - Registrar Office');
